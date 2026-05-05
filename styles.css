@@ -1,0 +1,229 @@
+ /* =========================
+   ROOT VARIABLES
+   Reusable design tokens
+   ========================= */
+:root {
+    --primary: #ff69b4;
+    --secondary: #ffb6c1;
+    --light-pink: #ffe4ec;
+    --bg: #fff0f5;
+    --text: #333;
+    --white: #ffffff;
+
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 50px;
+
+    --radius: 20px;
+    --shadow: 0 4px 12px rgba(255, 105, 180, 0.15);
+
+    --font-main: 'Segoe UI', sans-serif;
+}
+*{
+    margin: 0;        /* removes default outer spacing */
+    padding: 0;       /* removes default inner spacing */
+    box-sizing: border-box; /* makes width easier to control */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* =========================
+   BODY (entire page styling)
+   ========================= */
+body {
+    font-family: var(--font-main);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+/* =========================
+   NAVBAR (top menu)
+   ========================= */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 15px 0;
+    box-shadow: var(--shadow);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 3px;
+    border-bottom: 3px solid transparent;
+    transition: 0.25s ease;
+}
+
+nav a:hover {
+    border-bottom-color: var(--white);
+}
+.nav-img {
+    width: 35px;          /* small size */
+    height: 35px;
+    border-radius: 50%;   /* circle */
+    vertical-align: middle; /* aligns with text */
+    margin-right: 8px;    /* space before name */
+}
+
+nav h1 {
+    color: white;
+}
+
+nav ul {
+    list-style: none; /* removes bullet points */
+    display: flex; /* makes menu horizontal */
+    gap: 20px; /* space between links */
+}
+
+nav a {
+    color: white;
+    text-decoration: none; /* removes underline */
+    font-weight: bold;
+}
+
+/* =========================
+   HERO SECTION (top intro)
+   ========================= */
+.hero {
+    height: 90vh; /* takes 90% of screen height */
+    
+    display: flex;
+    flex-direction: column; /* stack items vertically */
+    justify-content: center; /* center vertically */
+    align-items: center; /* center horizontally */
+    background: #ffe4ec; /* soft pink background */
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem; /* large heading */
+    color: #ff69b4; /* stronger pink */
+}
+
+/* Button styling */
+.btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff69b4;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px; /* rounded edges */
+}
+
+/* =========================
+   GENERAL SECTIONS
+   ========================= */
+section {
+    padding: var(--spacing-lg);
+    text-align: center;
+    background: var(--white);
+    margin: 25px auto;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-left: 6px solid var(--primary);
+}
+
+.skill {
+    background: #ffb6c1;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: rgb(6, 0, 0);
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.skill {
+    background: var(--secondary);
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: var(--text);
+}  
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: var(--light-pink);
+    padding: 20px;
+    border-radius: var(--radius);
+}
+.interests {
+    background: #fff5f8; /* slightly different pink */
+}
+
+/* =========================
+   CONTACT SECTION
+   ========================= */
+.contact {
+    background: #ffe4ec;
+}
+.contact a {
+    color: var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+    background: #ffb6c1;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   Makes it look good on phones
+   ========================= */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 30px 20px;
+    }
+}
