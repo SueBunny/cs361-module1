@@ -1,1 +1,1 @@
-Personal Prfile for cs361
+Personal Profile for cs361
