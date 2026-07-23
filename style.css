@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  /* colours */
+  --color-primary: #e8a1c4;      /* pastel pink — headings, accents */
+  --color-primary-dark: #d97fac; /* deeper pink — hover states */
+  --color-secondary: #f7d6e0;    /* blush pink — backgrounds */
+  --color-bg: #fff7fa;           /* page background */
+  --color-white: #ffffff;
+  --color-text: #5c4550;         /* soft plum-brown, not harsh black */
+
+  /* spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+
+  /* type */
+  --font-body: 'Poppins', sans-serif;
+
+  /* misc */
+  --radius: 12px;
+  --shadow: 0 4px 14px rgba(216, 130, 170, 0.18);
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+h3 {
+  font-size: 1.1rem;
+  color: var(--color-primary-dark);
+}
+
+p {
+  margin-bottom: var(--space-sm);
+}
+
+a {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+header {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+nav a {
+  color: var(--color-white);
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: border-bottom 0.2s ease;
+}
+
+nav a:hover {
+  border-bottom: 2px solid var(--color-white);
+}
+
+main,
+aside,
+footer {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--color-primary);
+  padding: var(--space-md);
+  margin: var(--space-md) auto;
+  max-width: 700px;
+}
+
+
+.profile-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-figure img {
+  display: block;
+  margin: 0 auto var(--space-xs);
+  border-radius: 50%;
+  border: 3px solid var(--color-primary);
+  transition: transform 0.2s ease;
+}
+
+.profile-figure img:hover {
+  transform: scale(1.05);
+}
+
+.profile-figure figcaption {
+  font-size: 0.9rem;
+  color: var(--color-primary-dark);
+}
+
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  display: inline-block;
+  background-color: var(--color-secondary);
+  border-radius: var(--radius);
+  padding: 0.35rem 0.9rem;
+  margin: 0.25rem;
+}
+
+
+section h2::before {
+  content: "🌸 ";
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-sm);
+}
+
+thead {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+th,
+td {
+  padding: var(--space-xs);
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--color-secondary);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--color-bg);
+}
+
+tfoot {
+  border-top: 2px solid var(--color-primary);
+  font-weight: 600;
+}
+
+td,
+th {
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+footer {
+  text-align: center;
+}
